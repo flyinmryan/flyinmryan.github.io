@@ -45,7 +45,6 @@ function initMap() {
                     content: "<h1>" + location.name + ", " + countries[location.sys.country] + "</h1>" +
                                 "<img src='https://www.openweathermap.org/img/w/" + location.weather[0].icon + ".png' />" +
                                 "<p>" + location.main.temp + "&deg;</p>" +
-                                // "<p>" + location.weather[0].description + "</p>" +
                                 imgTag
                 });
                 infowindow.open(map, marker);
@@ -82,12 +81,47 @@ function initMap() {
         $.get({
             url: "https://api.openweathermap.org/data/2.5/weather?lat=" + city.lat + "&lon=" + city.long + "&units=imperial&APPID=ca6715e3bc0a5934ba9c218476a1374f",
             success: function(location){
-                // console.log(location);
                 marker = new google.maps.Marker({
                     position: { lat: location.coord.lat-3, lng: location.coord.lon },
                     map: map,
                     icon: "https://www.openweathermap.org/img/w/" + location.weather[0].icon + ".png",
                     title: city.name + " " + location.main.temp 
+                });
+                marker.addListener('click', function(event) {
+                    latitutde = event.latLng.lat();
+                    longitude = event.latLng.lng();
+                    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitutde + "&lon=" + longitude + "&units=imperial&APPID=ca6715e3bc0a5934ba9c218476a1374f";
+                    $.get({
+                        url: apiUrl,
+                        success: function(location){
+                            marker = new google.maps.Marker({
+                                position: { lat: latitutde, lng: longitude },
+                                map: map
+                            });
+                            var upperLimit = longitude + 14;
+                            var lowerLimit = longitude - 14;
+                            var imgTag = "";
+                            satelliteImages.forEach(function(img){
+                                if (img.coords.lon > lowerLimit && img.coords.lon < upperLimit) {
+                                    imgTag = "<a href='" + $("#" + img.id + " img").attr("src") + "' data-lightbox='image'>" + $("#" + img.id).html() + "</a>";
+                                }
+                            })
+                            var infowindow = new google.maps.InfoWindow({
+                                pixelOffset: new google.maps.Size(0, 220),
+                                content: "<h1>" + location.name + ", " + countries[location.sys.country] + "</h1>" +
+                                            "<img src='https://www.openweathermap.org/img/w/" + location.weather[0].icon + ".png' />" +
+                                            "<p>" + location.main.temp + "&deg;</p>" +
+                                            imgTag
+                            });
+                            infowindow.open(map, marker);
+                            google.maps.event.addListener(infowindow,'closeclick',function(){
+                                marker.setMap(null);
+                            });
+                        },
+                        error: function(error){
+                            console.log(error);
+                        }
+                    })
                 });
             },
             error: function(error){
