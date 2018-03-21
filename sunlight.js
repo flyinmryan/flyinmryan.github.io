@@ -239,33 +239,33 @@ var nite = {
     }
 }
 
-    var cities = [
-        { name: "Sydney", lat: -33.8688, long: 151.2093 },
-        { name: "Sacramento", lat: 38.5816, long: -121.4944 },
-        { name: "New York", lat: 40.7128, long: -74.0060 },
-        { name: "Berlin", lat: 52.5200, long: 13.4050 },
-        { name: "Cape Town", lat: -33.9249, long: 18.4241 },
-        { name: "Dallas", lat: 32.7767, long: -96.7970 },
-        { name: "Dallas", lat: 32.7767, long: -96.7970 },
-        { name: "Anchorage", lat: 61.2181, long: -149.9003 },
-        { name: "Buenos Aires", lat: -34.6037, long: -58.3816 },
-        { name: "Madrid", lat: 40.4168, long: -3.7038 },
-        { name: "New Delhi", lat: 28.6139, long: 77.2090 },
-        { name: "Reyadh", lat: 24.7136, long: 46.6753 },
-        { name: "Tiksi", lat: 71.6375, long: 128.8645 },
-        { name: "Niamey", lat: 13.5116, long: 2.1254 },
-        { name: "Astana", lat: 51.1605, long: 71.4704 },
-        { name: "Moscow", lat: 55.7558, long: 37.6173 },
-        { name: "Reykjavik", lat: 64.1265, long: -21.8174 },
-        { name: "Bogota", lat: 4.7110, long: -74.0721 },
-        { name: "Tokyo", lat: 35.6895, long: 139.6917 },
-        { name: "Fortaleza", lat: -3.7319, long: -38.5267 },
-        { name: "Singapore", lat: 1.3521, long: 103.8198 },
-        { name: "Hay River", lat: 60.8162, long: -115.7854 },
-        { name: "Pangnirtung", lat: 66.1466, long: -65.7012 },
-        { name: "Beijing", lat: 39.9042, long: 116.4074 },
-        { name: "Honolulu", lat: 21.3069, long: -157.8583 }
-    ]
+var cities = [
+    { name: "Sydney", lat: -33.8688, long: 151.2093 },
+    { name: "Sacramento", lat: 38.5816, long: -121.4944 },
+    { name: "New York", lat: 40.7128, long: -74.0060 },
+    { name: "Berlin", lat: 52.5200, long: 13.4050 },
+    { name: "Cape Town", lat: -33.9249, long: 18.4241 },
+    { name: "Dallas", lat: 32.7767, long: -96.7970 },
+    { name: "Dallas", lat: 32.7767, long: -96.7970 },
+    { name: "Anchorage", lat: 61.2181, long: -149.9003 },
+    { name: "Buenos Aires", lat: -34.6037, long: -58.3816 },
+    { name: "Madrid", lat: 40.4168, long: -3.7038 },
+    { name: "New Delhi", lat: 28.6139, long: 77.2090 },
+    { name: "Reyadh", lat: 24.7136, long: 46.6753 },
+    { name: "Tiksi", lat: 71.6375, long: 128.8645 },
+    { name: "Niamey", lat: 13.5116, long: 2.1254 },
+    { name: "Astana", lat: 51.1605, long: 71.4704 },
+    { name: "Moscow", lat: 55.7558, long: 37.6173 },
+    { name: "Reykjavik", lat: 64.1265, long: -21.8174 },
+    { name: "Bogota", lat: 4.7110, long: -74.0721 },
+    { name: "Tokyo", lat: 35.6895, long: 139.6917 },
+    { name: "Fortaleza", lat: -3.7319, long: -38.5267 },
+    { name: "Singapore", lat: 1.3521, long: 103.8198 },
+    { name: "Hay River", lat: 60.8162, long: -115.7854 },
+    { name: "Pangnirtung", lat: 66.1466, long: -65.7012 },
+    { name: "Beijing", lat: 39.9042, long: 116.4074 },
+    { name: "Honolulu", lat: 21.3069, long: -157.8583 }
+]
 
 var countries = {
     "AD": "Andorra",
