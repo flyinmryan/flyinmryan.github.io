@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sunlight Map</title>
+	<script
+	src="https://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	crossorigin="anonymous"></script>
+	<script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaOWt26aqk1CJmftj266RNPrO0MsTOBRQ&libraries=visualization&callback=initMap">
+	</script>
+	<script type="text/javascript" src="sunlight.js"></script>
+	<script type="text/javascript" src="lightbox.js"></script>
+	<link rel="stylesheet" href="lightbox.css">
+	<style>
+		body, html {
+			height: 100%;
+			width: 100%;
+			overflow: hidden !important;
+			margin: 0px;
+		}
+		#map {
+			overflow: visible !important;
+			height: 100%;
+			width: 100%;
+		}
+		.sat-img {
+			width: 160px;
+			margin: 0px auto;
+			cursor: pointer;
+		}
+		.gm-style-iw:nth-child(2) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		.gm-style div div div div div div div div div {
+	        display: none;
+        }
+        .gm-style p {
+        	font-size: 18px;
+		    font-weight: 700;
+        }
+	</style>
+</head>
+<body>
+
+    <div id="map" style="overlow: visible;"></div>
+    <div id="images" hidden></div>
+
+</body>
+</html>
