@@ -40,9 +40,12 @@ function initMap() {
                         imgTag = "<a href='" + $("#" + img.id + " img").attr("src") + "' data-lightbox='image'>" + $("#" + img.id).html() + "</a>";
                     }
                 })
+                var locationName = location.name == undefined ? "Unknown location" : location.name;
+                var countryName = countries[location.sys.country] == undefined ? "" : countries[location.sys.country];
+                var css = (locationName == "Unknown location" || countryName == "") ? "hidden" : "";
                 var infowindow = new google.maps.InfoWindow({
                     pixelOffset: new google.maps.Size(0, 220),
-                    content: "<h1>" + location.name + ", " + countries[location.sys.country] + "</h1>" +
+                    content: "<h1 " + css + ">" + locationName + ", " + countryName + "</h1>" +
                                 "<img src='https://www.openweathermap.org/img/w/" + location.weather[0].icon + ".png' />" +
                                 "<p>" + location.main.temp + "&deg;</p>" +
                                 imgTag
