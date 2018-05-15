@@ -18,11 +18,34 @@
 			width: 100%;
 			overflow: hidden !important;
 			margin: 0px;
+			font-family: Roboto, Arial, sans-serif;
 		}
 		#map {
 			overflow: visible !important;
 			height: 100%;
 			width: 100%;
+		}
+		.shell {
+			position: absolute;
+			left: 50%;
+			top: 50%
+		}
+		#info-box {
+			position: relative;
+			left: -50%;
+			top: -50%;
+			margin: 0px auto;
+			padding: 6px;
+			background: rgba(0,0,0,.4);
+			font-size: 14px;
+		    cursor: move;
+		    cursor: grab;
+		    cursor: -moz-grab;
+		    cursor: -webkit-grab;
+		    color: white;
+		    font-weight: bold;
+		    letter-spacing: 3px;
+			font-size: 30px;
 		}
 		.sat-img {
 			width: 160px;
@@ -47,6 +70,7 @@
 <body>
 
     <div id="map" style="overlow: visible;"></div>
+    <div class="shell"><div id="info-box">Click anywhere</div></div>
     <div id="images" hidden></div>
 
 </body>

@@ -20,6 +20,7 @@ function initMap() {
     });
 
     map.addListener('click', function(event) {
+        if ($("#info-box").is(":visible")) $("#info-box").hide();
         latitutde = event.latLng.lat();
         longitude = event.latLng.lng();
         var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitutde + "&lon=" + longitude + "&units=imperial&APPID=ca6715e3bc0a5934ba9c218476a1374f";
@@ -91,6 +92,7 @@ function initMap() {
                     title: city.name + " " + location.main.temp 
                 });
                 marker.addListener('click', function(event) {
+                    if ($("#info-box").is(":visible")) $("#info-box").hide();
                     latitutde = event.latLng.lat();
                     longitude = event.latLng.lng();
                     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitutde + "&lon=" + longitude + "&units=imperial&APPID=ca6715e3bc0a5934ba9c218476a1374f";
@@ -131,6 +133,13 @@ function initMap() {
                 console.log(error);
             }
         })
+    })
+
+    $("#info-box").click(function (e) {
+        $(this).hide();
+        var click = new $.Event("click");
+        click.pageX = e.pageX;
+        click.pageY = e.pageY;
     })
 
     nite.init(map);
