@@ -7,7 +7,7 @@
 	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
 	crossorigin="anonymous"></script>
 	<script async defer
-	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaOWt26aqk1CJmftj266RNPrO0MsTOBRQ&libraries=visualization&callback=initMap">
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbhM5tqeMKJqoNV-FmVqRBjnW6xwfvoYM&libraries=visualization&callback=initMap">
 	</script>
 	<script type="text/javascript" src="sunlight.js"></script>
 	<script type="text/javascript" src="lightbox.js"></script>
@@ -18,34 +18,11 @@
 			width: 100%;
 			overflow: hidden !important;
 			margin: 0px;
-			font-family: Roboto, Arial, sans-serif;
 		}
 		#map {
 			overflow: visible !important;
 			height: 100%;
 			width: 100%;
-		}
-		.shell {
-			position: absolute;
-			left: 50%;
-			top: 50%
-		}
-		#info-box {
-			position: relative;
-			left: -50%;
-			top: -50%;
-			margin: 0px auto;
-			padding: 6px;
-			background: rgba(0,0,0,.4);
-			font-size: 14px;
-		    cursor: move;
-		    cursor: grab;
-		    cursor: -moz-grab;
-		    cursor: -webkit-grab;
-		    color: white;
-		    font-weight: bold;
-		    letter-spacing: 3px;
-			font-size: 30px;
 		}
 		.sat-img {
 			width: 160px;
@@ -69,8 +46,7 @@
 </head>
 <body>
 
-    <div id="map" style="overlow: visible;"></div>
-    <div class="shell"><div id="info-box">Click anywhere</div></div>
+    <div id="map" style="overflow: visible;"></div>
     <div id="images" hidden></div>
 
 </body>
