@@ -50,7 +50,7 @@ function initMap() {
     map.addListener('click', function(event) {
         latitutde = event.latLng.lat();
         longitude = event.latLng.lng();
-        var apiUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitutde + "&lon=" + longitude + "&units=imperial&APPID=ca6715e3bc0a5934ba9c218476a1374f";
+        var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitutde + "&lon=" + longitude + "&units=imperial&APPID=ca6715e3bc0a5934ba9c218476a1374f";
         if (marker != null) marker.setMap(null);
 
         $.get({
@@ -83,7 +83,7 @@ function initMap() {
                             var infowindow = new google.maps.InfoWindow({
                                 pixelOffset: new google.maps.Size(0, 220),
                                 content: "<h1>" + location.name + ", " + countries[location.sys.country] + "</h1>" +
-                                    "<img src='http://www.openweathermap.org/img/w/" + location.weather[0].icon + ".png' />" +
+                                    "<img src='https://www.openweathermap.org/img/w/" + location.weather[0].icon + ".png' />" +
                                     "<p>" + location.main.temp + "&deg;</p>" +
                                     "<p>" + location.weather[0].description + "</p>" +
                                     imgTag
@@ -110,13 +110,13 @@ function initMap() {
 
     cities.forEach(function(city){
         $.get({
-            url: "http://api.openweathermap.org/data/2.5/weather?lat=" + city.lat + "&lon=" + city.long + "&units=imperial&APPID=ca6715e3bc0a5934ba9c218476a1374f",
+            url: "https://api.openweathermap.org/data/2.5/weather?lat=" + city.lat + "&lon=" + city.long + "&units=imperial&APPID=ca6715e3bc0a5934ba9c218476a1374f",
             success: function(location){
                 // console.log(location);
                 marker = new google.maps.Marker({
                     position: { lat: location.coord.lat-3, lng: location.coord.lon },
                     map: map,
-                    icon: "http://www.openweathermap.org/img/w/" + location.weather[0].icon + ".png",
+                    icon: "https://www.openweathermap.org/img/w/" + location.weather[0].icon + ".png",
                     title: city.name + " " + location.main.temp 
                 });
             },
