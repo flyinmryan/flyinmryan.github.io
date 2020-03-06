@@ -153,7 +153,7 @@ var nite = {
             center: this.getShadowPosition(),
             radius: this.getShadowRadiusFromAngle(0.566666),
             fillColor: "#000",
-            fillOpacity: 0.6,
+            fillOpacity: 0.2,
             strokeOpacity: 0,
             clickable: false,
             editable: false
@@ -173,7 +173,7 @@ var nite = {
             center: this.getShadowPosition(),
             radius: this.getShadowRadiusFromAngle(12),
             fillColor: "#000",
-            fillOpacity: 0.3,
+            fillOpacity: 0.2,
             strokeOpacity: 0,
             clickable: false,
             editable: false
@@ -183,7 +183,7 @@ var nite = {
             center: this.getShadowPosition(),
             radius: this.getShadowRadiusFromAngle(18),
             fillColor: "#000",
-            fillOpacity: 0.0,
+            fillOpacity: 0.1,
             strokeOpacity: 0,
             clickable: false,
             editable: false
