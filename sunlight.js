@@ -9,7 +9,7 @@ function satelliteImage(coords, url, id) {
 
 function initMap() {
     
-    var SacRiverTrainLocation = { lat: 38.596486, lng: -121.550476 };
+    var sacramento = { lat: 38.596486, lng: -121.550476 };
     var centerOfUsa = { lat: 39.8097, lng: -98.5556 };
     var centerOfFlatMap = { lat: 15.804205, lng: 16.392969 };
     var cities = [
