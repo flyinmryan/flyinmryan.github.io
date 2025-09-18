@@ -1,6 +1,6 @@
 ﻿Sunlight Map
 
-This map and data are loaded from several APIs to create an interactive Sunlight Map.
+This map and its data are loaded from several APIs to create an interactive Sunlight Map.
 
 Credit for the night shading goes to https://github.com/rossengeorgiev/nite-overlay
 
